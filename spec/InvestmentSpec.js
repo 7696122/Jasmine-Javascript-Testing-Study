@@ -158,3 +158,29 @@ describe("toMatch 테스트", () => {
     expect("My big matched string").toMatch(/My(.+)string/);
   });
 });
+
+describe("toBeLessThan 테스트", () => {
+  it("should 실제값이 기대값보다 작다", function () {
+    expect(1).toBeLessThan(2);
+  });
+});
+
+describe("toBeGreaterThan 테스트", () => {
+  it("should 실제값이 기대값보다 크다", function () {
+    expect(2).toBeGreaterThan(1);
+  });
+});
+
+describe("toThrow 테스트", () => {
+  it("should 예외가 던져져야 한다", function () {
+    expect(function () {
+      throw "Some exception";
+    }).toThrow("Some exception");
+  });
+});
+
+describe("주석 테스트", () => {
+  xit("should 주석 처리돼야한다", function () {
+    expect(false).toBeTruthy();
+  });
+});
